@@ -122,6 +122,10 @@
 									"referenceName": "parameterdataset",
 									"type": "DatasetReference",
 									"parameters": {
+										"ds_container": {
+											"value": "@pipeline().parameters.PP_container",
+											"type": "Expression"
+										},
 										"ds_folder": {
 											"value": "@pipeline().parameters.PP_output",
 											"type": "Expression"
