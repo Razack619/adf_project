@@ -10,11 +10,11 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "output.csv",
-				"folderPath": "output",
+				"fileName": "address.csv",
+				"folderPath": "output/sqloutput",
 				"fileSystem": "adfproject"
 			},
-			"columnDelimiter": "\t",
+			"columnDelimiter": ",",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
