@@ -51,7 +51,13 @@
 				"outputs": [
 					{
 						"referenceName": "sqlsink",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": {
+								"value": "@pipeline().parameters.color",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			},
@@ -126,7 +132,10 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT * FROM [SalesLT].[Product] where color = 'Red'\n",
+						"sqlReaderQuery": {
+							"value": "@concat('SELECT * FROM ', pipeline().parameters.tablename,' where color = ''', pipeline().parameters.color, '''')",
+							"type": "Expression"
+						},
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -160,7 +169,13 @@
 				"outputs": [
 					{
 						"referenceName": "sqlsink",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": {
+								"value": "@pipeline().parameters.color",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
