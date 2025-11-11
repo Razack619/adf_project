@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "SalesLTProductModel.zip",
 				"folderPath": "landing",
 				"fileSystem": "adfproject"
 			}
